@@ -1,10 +1,10 @@
 {
   "name": "my-own-react-app",
   "private": true,
+  "homepage": "https://abdulquddusmuhammad.github.io/movies_recommender/",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "homepage": "https://abdulquddusmuhammad.github.io/movies_recommender/",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
     "dev": "vite",
