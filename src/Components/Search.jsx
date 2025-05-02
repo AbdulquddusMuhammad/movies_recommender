@@ -1,10 +1,12 @@
 import React from "react";
+// import searchImg from "C:/Learning React/my-own-react-app/dist/search.svg";
+import searchImg from "../../dist/search.svg";
 
 const Search = ({ searchTerm, setSearchTerm }) => {
   return (
     <div className="search">
       <div>
-        <img src="../../public/search.svg" alt="" />
+        <img src={searchImg} alt="" />
         <input
           type="text"
           placeholder="Search through Thousands of Videos"

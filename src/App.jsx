@@ -2,6 +2,7 @@ import Search from "./Components/Search";
 import { useEffect, useState } from "react";
 import Spinner from "./Components/Spinner";
 import MovieCard from "./Components/MovieCard";
+import heroImg from "../dist/hero.png";
 
 const API_BASE_URL = "https://api.themoviedb.org/3";
 
@@ -63,7 +64,7 @@ const App = () => {
 
       <div className="wrapper">
         <header>
-          <img src="../public/hero.png" alt="Hero Banner" />
+          <img src={heroImg} alt="Hero Banner" />
           <h1>
             Find <span className="text-gradient">Movies</span>You will Enjoy without hassle
           </h1>
