@@ -2,11 +2,13 @@ import Search from "./Components/Search";
 import { useEffect, useState } from "react";
 import Spinner from "./Components/Spinner";
 import MovieCard from "./Components/MovieCard";
-import heroImg from "../dist/hero.png";
+import heroImg from "../public/hero.png";
 
 const API_BASE_URL = "https://api.themoviedb.org/3";
 
 const API_KEY = import.meta.env.VITE_TMDB_API_KEY;
+
+console.log(API_KEY);
 
 const API_OPTIONS = {
   method: "GET",
@@ -27,7 +29,9 @@ const App = () => {
     setErrorMessage("");
 
     try {
-      const endpoint = query ? `${API_BASE_URL}/search/movie?query=${query}` : `${API_BASE_URL}/discover/movie?sort_by=popularity.desc`;
+      const endpoint = query
+        ? `${API_BASE_URL}/search/movie?query=${query}`
+        : `${API_BASE_URL}/discover/movie?sort_by=popularity.desc`;
 
       const response = await fetch(endpoint, API_OPTIONS);
 
@@ -66,7 +70,8 @@ const App = () => {
         <header>
           <img src={heroImg} alt="Hero Banner" />
           <h1>
-            Find <span className="text-gradient">Movies</span>You will Enjoy without hassle
+            Find <span className="text-gradient">Movies</span>You will Enjoy
+            without hassle
           </h1>
           <Search searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
         </header>

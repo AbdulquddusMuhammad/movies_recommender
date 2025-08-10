@@ -1,6 +1,6 @@
 import React from "react";
 // import searchImg from "C:/Learning React/my-own-react-app/dist/search.svg";
-import searchImg from "../../dist/search.svg";
+import searchImg from "../../public/search.svg";
 
 const Search = ({ searchTerm, setSearchTerm }) => {
   return (
